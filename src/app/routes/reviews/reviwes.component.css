@@ -1,0 +1,27 @@
+.review{
+    height: 100px;
+    width: 90%;
+    border-left: 3px solid rgb(10, 94,94);
+    background-color: red;
+    margin:10px ;
+    padding: 10px;
+}
+
+
+h3{
+    color: rgb(89, 89,153);
+    font-family: agency FB;
+    font-size: 20px;
+}
+
+h4{
+    color:darkblue;
+    font-family:Arial;
+
+}
+
+.rdate{
+    font-family: courier ;
+    text-align: right;
+    font-size: 20px;
+}

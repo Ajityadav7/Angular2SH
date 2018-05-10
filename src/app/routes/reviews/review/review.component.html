@@ -1,0 +1,40 @@
+<div class="review">
+    <h3> {{current.name}} said ...</h3>
+  
+  <h2>{{current.course}} course</h2>
+  <p>
+    {{current.message}}
+    </p>
+    <div class="rdate">{{current.reviewdate}}</div>
+    </div>
+
+    <div class="rform">
+        <form [formGroup]="reviewForm" (submit)="saveReview">  
+          <table>
+            <tr>
+              <th>Name</th>
+              <td><input type="text" fromControlName="name"></td>
+
+              <td>
+
+                <div *ngIf='reviewForm.controls.name.hsaError("required")'>shuold be filled</div>
+                <div *ngIf='reviewForm.controls.name.hsaError("needFormate")'></div>
+              </td>
+              </tr>
+              <tr>
+                <th>Course</th>
+                <td><select>
+                  <option *ngFor "let x of courses">{{x}}</option>
+                  </select>
+                  </td>
+                  <td></td>
+                  <tr>
+                  <th>Message</th>
+                  <td><textarea rows="6" cols="50"></textarea></td>
+                  <td></td>
+                  </tr>
+                  <tr><td colspan="3" align="center">
+                    <button type="submit" class="btn btn-primary" [disabled]="!reviewForm.valid">Post Reviews</button>
+                    </td></tr></tr></table>
+                  </table><tr></tr>
+                  </table>

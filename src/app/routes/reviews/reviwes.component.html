@@ -1,0 +1,39 @@
+<h1>Course reviews</h1>
+<reviewlist></reviewlist>
+
+
+
+
+<div class="rform">
+        <form [formGroup]="reviewForm" (submit)="saveReview">  
+          <table>
+            <tr>
+              <th>Name</th>
+              <td><input type="text" fromControlName="name"></td>
+
+              <td>
+
+                <div *ngIf='reviewForm.controls.name.hsaError("required")'>shuold be filled</div>
+                <div *ngIf='reviewForm.controls.name.hsaError("needFormate")'></div>
+              </td>
+              </tr>
+              <tr>
+                <th>Course</th>
+                <td><select>
+                  <option *ngFor "let x of courses">{{x}}</option>
+                  </select>
+                  </td>
+                  <td></td>
+                  <tr>
+                  <th>Message</th>
+                  <td><textarea rows="6" cols="50"></textarea></td>
+                  <td>
+                      <div *ngIf='reviewForm.controls.name.hsaError("required")'>shuold be filled</div>
+
+                  </td>
+                  </tr>
+                  <tr><td colspan="3" align="center">
+                    <button type="submit" class="btn btn-primary" [disabled]="!reviewForm.valid">Post Reviews</button>
+                    </td></tr></tr></table>
+                  </table><tr></tr>
+                  </table>
